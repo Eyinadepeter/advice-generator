@@ -1,0 +1,108 @@
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--Dark-Blue);
+  font-family: "Manrope", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background: var(--Dark-Grayish-Blue);
+
+  width: 100%;
+  max-width: 540px;
+
+  padding: 48px 40px 72px;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.advice-id {
+  color: var(--Neon-Green);
+  font-size: 13px;
+  letter-spacing: 4px;
+  margin-bottom: 28px;
+}
+
+#advice-text {
+  color: var(--Light-Cyan);
+  font-size: 28px;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+.divider {
+  width: 100%;
+  display: block;
+}
+
+.dice-btn {
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+
+  transform: translateX(-50%);
+
+  width: 64px;
+  height: 64px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--Neon-Green);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.dice-btn:hover {
+  box-shadow: 0 0 35px var(--Neon-Green);
+}
+
+.dice-btn img {
+  width: 24px;
+}
+
+@media (max-width: 600px) {
+
+  .card {
+    padding: 40px 24px 64px;
+  }
+
+  #advice-text {
+    font-size: 24px;
+  }
+
+  .advice-id {
+    font-size: 11px;
+  }
+
+}
